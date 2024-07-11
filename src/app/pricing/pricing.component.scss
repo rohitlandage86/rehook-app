@@ -1,0 +1,295 @@
+.pricing-bg{
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(234, 245, 249, 0.5) 100%
+    );
+       .pricing-1-section{
+        padding: 150px;
+       }
+      .pricing-heading-text{
+          color: #001b44;
+          font-style: normal;
+          font-size: 2.5rem;
+          font-weight: 600;
+      }
+      .pricing-discription-text{
+          color: #5d6878;
+      }
+      .save-more-yearly{
+        border-radius: 20px;
+        color: #001b44;
+        font-weight: 600;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+      
+      }
+      .highlighted {
+        color: #00acef;
+    }
+  }
+  #flexSwitchCheckChecked {
+    width: 40px;  
+    height: 20px;
+  
+}
+.pricing-cards{
+background: #FFFFFF;
+box-shadow: 0px 15px 60px rgba(27, 12, 99, 0.1);
+border-radius: 8px;
+    position: relative;
+
+    bottom: 100px;
+    .per-month-card{
+        border-radius: 10px;
+    }
+    .watch-video-btn {
+        background-color: #00acef;
+        border: #00acef;
+        color: #eceef1;
+        padding: 15px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 6px;
+      }
+      .watch-video-btn-Essentials{
+        background-color: #00acef;
+        border: #00acef;
+        color: #eceef1;
+        padding: 15px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 6px;
+      } 
+       .watch-video-btn-Everything{
+        background-color: #00acef;
+        border: #00acef;
+        color: #eceef1;
+        padding: 15px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 6px;
+      }
+      .price {
+        color: #00acef;
+      }
+
+      .price-per-month{
+        color:#001b44;
+      }
+      .dark-hr{
+        background-color: black;
+        margin-top: 0px;
+      }
+  }
+  .pricing-3-section{
+    background-color: #F3F9FB;
+    .pricing-sec-3-head-text {
+        color: #001b44;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+    }
+    .Onboarding-card{
+        text-align: start;
+        border-start-start-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+      //   height: 300px;
+
+        .Onboarding-code-text{
+            text-align: start;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 13px;
+            color: #001b44;
+          }
+          .Onboarding-card-p{
+            color: #5d6878;
+          }
+          
+    }
+  }
+  .carousel-item {
+    height: 400px;
+  }
+  #myCarousel {
+    margin-top: 50px;
+  }
+  
+  :host::ng-deep.carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50% / 100% 100%;
+    background-color: black;
+  }
+  .carousel-inner .carousel-item {
+    display: flex;
+  }
+  
+  .carousel-inner .carousel-item .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .carousel-inner .carousel-item .col {
+    flex: 1;
+    max-width: 33.3333%;
+  }
+  
+
+  .accordion-item {
+    border: 1px solid #dde5e8; 
+    border-radius: 24px;
+    margin-bottom: 1rem; 
+  
+    .accordion-header {
+      border-radius: 24px 24px 0 0; 
+    }
+  
+    .accordion-button {
+        border-radius: 24px;
+        color: inherit;
+        box-shadow: none; 
+        font-weight: 500;
+        
+        &:focus {
+            box-shadow: none; 
+        }
+        
+        &:not(.collapsed) {
+          background-color: #f8feff;
+          // background: linear-gradient(180deg, rgba(239, 251, 255, 0.5) 0%, rgba(229, 239, 254, 0) 100%);
+        color: #00acef;
+        border-color: #00acef; 
+      }
+  
+      .fas {
+        margin-right: 0.5rem; // Adjust icon spacing as needed
+      }
+    }
+  
+    .accordion-body {
+      background: linear-gradient(180deg, rgba(239, 251, 255, 0.5) 0%, rgba(229, 239, 254, 0) 100%);
+      border: 1px solid #dde5e8; // Default border
+      border-top: 0; // Remove top border
+      border-radius: 0 0 24px 24px; 
+      padding: 1rem;
+  
+      .accordion-item.show & {
+        background: linear-gradient(180deg, rgba(239, 251, 255, 0.5) 0%, rgba(229, 239, 254, 0) 100%);
+        border-color: #00acef;
+      }
+    }
+  
+    // Active state styles
+    &.show, .accordion-button:not(.collapsed) {
+      .accordion-header {
+        background: linear-gradient(180deg, rgba(239, 251, 255, 0.5) 0%, rgba(229, 239, 254, 0) 100%);
+      }
+    }
+  }
+  
+//reseponsive css
+@media (max-width: 576px) {
+  .pricing-1-section{
+    padding: 30px !important;
+  }
+  .pricing-cards{
+    background: #FFFFFF;
+    box-shadow: 0px 15px 60px rgba(27, 12, 99, 0.1);
+    border-radius: 8px;
+        position: relative;
+        bottom: 10px !important;
+        display: flex;
+        padding: 0px !important;
+        margin: 2px !important;
+        // height: 400px;
+  }
+  .save-more-yearly{
+    border-radius: 20px;
+    color: #001b44;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+    font-size: 10px;
+  
+  }
+  .watch-video-btn-Essentials{
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px !important;
+    margin: 0px !important;
+    margin-top: 5px !important;
+    border-radius: 6px;
+    font-size: 10px !important;
+
+  }
+  .watch-video-btn-Everything {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px !important;
+    margin: 0px !important;
+    border-radius: 6px;
+    font-size: 10px !important;
+  } 
+  .price {
+    color: #00acef !important;
+    display: flex;
+    justify-content: flex-start !important;
+    margin: 0px !important;
+  }
+  .per-month-card{
+    padding: 5px !important;
+    margin: 7px !important;
+  }
+  .pricing-3-section{
+    padding: 0px !important;
+  }
+  .Onboarding-card-p{
+    margin-bottom: 0px !important;
+  }
+  .p-Onboarding{
+    font-size: 10px !important;
+    
+  }
+  .Onboarding-p{
+    margin-bottom: 20px !important;
+  }
+  .icon-Onboarding{
+    height: 60px !important;
+  }
+  hr {
+    margin: 0px !important;
+  }
+  h2{
+    font-size: 15px !important;
+  }
+  h6{
+    font-size: 6px !important;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item .col {
+    max-width: 100%;
+  }
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+@media (max-width: 1300.98px) {
+
+}

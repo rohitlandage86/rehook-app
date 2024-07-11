@@ -1,0 +1,62 @@
+.solutions-section-bg{
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(234, 245, 249, 0.5) 100%
+    );
+       .solution-1-sec{
+        padding: 150px;
+       }
+      .solutions-heading-text{
+          color: #001b44;
+          font-style: normal;
+          font-size: 2.5rem;
+          font-weight: 500;
+      }
+      .solution-discription-text{
+          color: #5d6878;
+      }
+  }
+  
+  .solution-cards{
+      .QR-card{
+          border-start-start-radius: 15px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+        //   height: 300px;
+  
+          .QR-code-text{
+              text-align: start;
+              font-size: 1.8rem;
+              font-weight: 700;
+              margin-top: 13px;
+              color: #001b44;
+            }
+            .QR-dis-p{
+              color: #5d6878;
+            }
+            .arrow{
+              rotate: 50deg;
+            }
+      }
+      
+  }
+  //reseponsive css
+@media (max-width: 576px) {
+  .solution-1-sec{
+    padding: 30px !important;
+  }
+  .icon-Onboarding{
+    height: 60px !important;
+  }
+  hr {
+    margin: 0px !important;
+  }
+  h2{
+    font-size: 15px !important;
+  }
+  h6{
+    font-size: 6px !important;
+  }
+}

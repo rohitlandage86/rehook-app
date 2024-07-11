@@ -1,0 +1,181 @@
+<section>
+    <div class="container-fuild">
+        <!-- <div class="row justify-content-center">
+            <div class="col-md-10 d-flex justify-content-end">
+                <div class="d-flex">
+                    <div class="form-float">
+                        <input type="search" class="form-control mx-1" id="floatingInputGrid" placeholder="Search here..">
+                    </div>
+                    <button class="btn btn-primary mx-2">+ Add</button>
+                </div>
+            </div>
+        </div> -->
+        <div class="row mt-3  justify-content-center mt-5 ">
+            <div class="col-md-7 ">
+                <div class="upgrade-card">
+                    <div class="well-come">Hello, <span>{{business?.first_name}} {{business?.last_name}} ! </span></div>
+                    <div class="card h-100 w-100 upgrade-plan">
+                        <h3>Upgrade to</h3>
+                        <h3>Premium Plan</h3>
+                        <small> More potential reviews, more business for you.</small>
+                        <div class="botton-section h-100 d-flex align-items-end">
+                            <button class="btn-white mx-1">Upgrade</button>
+                            <button class="btn-learn mx-1">Learn more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-tab">
+                    <mat-tab-group>
+                        <mat-tab label="Business">
+                            <div class="row business m-0">
+                                <div class="col-md-5 card busines-card bg-dark m-2 p-3 d-flex justify-content-between"
+                                    style="height: 100px; ">
+                                    <div class="row">
+                                        <div class="col-md-8 business-name">
+                                            Rehook
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end p-0">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row manage-plan">
+                                        <div class="col-md-6">
+                                            <small> Standard Plan</small>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end p-0">
+                                            <small class="underline">Manage Plan</small>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 card busines-card bg-dark m-2 p-3 d-flex justify-content-between"
+                                    style="height: 100px; ">
+                                    <div class="row">
+                                        <div class="col-md-8 business-name">
+                                            The Smoke Times
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end p-0">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row manage-plan">
+                                        <div class="col-md-6">
+                                            <small> Standard Plan</small>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end p-0">
+                                            <small class="underline">Manage Plan</small>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 card busines-card bg-dark m-2 p-3 d-flex justify-content-between"
+                                    style="height: 100px; ">
+                                    <div class="row">
+                                        <div class="col-md-8 business-name">
+                                            The Challenge
+                                            Journal
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end p-0">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row manage-plan">
+                                        <div class="col-md-6">
+                                            <small> Standard Plan</small>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-end p-0">
+                                            <small class="underline">Manage Plan</small>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 card busines-card add-business  m-2" style="height: 100px;  background-color: #DFDFDF;">
+                               <img class="pointer" src="../../../assets/images/dashboard-icon/plus.png" alt="">
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Connected Sites"> Content 2 </mat-tab>
+                        <mat-tab label="Report"> Content 3 </mat-tab>
+                    </mat-tab-group>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card review-card h-100 w-100">
+                    <div class="row review-card-header">
+                        <div class="col-md-6">
+                            <h5>Reviews</h5>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-end ">
+                            <small>See All Reviews</small>
+                        </div>
+                    </div>
+                    <div class=" row reviewer ">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user1.png" alt=""></td>
+                                    <td class="user-name">Sam Berkley <br> <small>I had fun !!! their staff is very
+                                            ac....</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user1.png" alt=""></td>
+                                    <td class="user-name">Wendy Williams <br> <small>I had fun !!! their staff is very
+                                            ac...</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/dashboard-icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user2.png" alt=""></td>
+                                    <td class="user-name">Leonardo Dicaprio<br> <small>I had fun !!! their staff is very
+                                            ac....</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/dashboard-icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user2.png" alt=""></td>
+                                    <td class="user-name">Will Smith <br> <small>I had fun !!! their staff is very
+                                            ac...</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/dashboard-icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user1.png" alt=""></td>
+                                    <td class="user-name">Britney Spears<br> <small>I had fun !!! their staff is very
+                                            ac....</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/dashboard-icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="user-image"><img src="../../../assets/images/dashboard-user/user2.png" alt=""></td>
+                                    <td class="user-name">Buzz Lightyear<br> <small>I had fun !!! their staff is very
+                                            ac...</small></td>
+                                    <td class="action"><img class="more"
+                                            src="../../../assets/images/dashboard-icon/three-dots.svg" alt="">
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

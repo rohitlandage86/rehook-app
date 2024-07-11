@@ -1,0 +1,66 @@
+.business-sidebar {
+    width: 155px;
+    position: fixed;
+}
+
+.business-logo {
+    img {
+        height: 70px;
+        width: 200px;
+        position: relative;
+        left: -30px;
+    }
+}
+
+.menu-bar {
+    height: 80vh;
+    background: #383737;
+    color: #FFF;
+    border-top-right-radius: 17px !important;
+    width: 63px;
+    border-bottom-right-radius: 17px;
+    list-style: none;
+    padding: 16px 0px 0px 16px;
+
+    .pointer {
+        display: flex;
+        padding: 20px 0px;
+        align-items: center;
+        height: 70px;
+
+        .icon {
+            img {
+                height: 25px;
+            }
+        }
+
+        .item {
+            img {
+                position: relative;
+                right: -9px;
+                display: none;
+                height: 70px;
+            }
+        }
+
+        .item.is-active {
+            img {
+                position: relative;
+                right: -9px;
+                display: unset;
+                height: 70px;
+            }
+        }
+    }
+
+}
+.active-link {
+    font-weight: bold !important;
+    font-size: 1.1rem !important; /* fs-5 equivalent */
+  }
+  .log-out-btn {
+    // color: #0f284f !important;
+    text-decoration: none;
+    font-size: 600 !important;
+    margin-left: 200px !important;
+  }

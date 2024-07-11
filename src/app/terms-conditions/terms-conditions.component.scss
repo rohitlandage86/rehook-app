@@ -1,0 +1,66 @@
+.terms-conditions-section-1-bg{
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(234, 245, 249, 0.5) 100%
+    );
+       .terms-conditions-1-sec{
+        padding: 150px;
+       }
+      .terms-conditions-heading-text{
+          color: #001b44;
+          font-style: normal;
+          font-size: 2.5rem;
+          font-weight: 500;
+      }
+      .terms-conditions-discription-text{
+          color: #5d6878;
+      }
+  }
+  .btn-check:checked + .btn-outline-primary {
+    background-color: transparent;
+    border: none;
+    color: #007bff; /* Set your desired color for the active button's label */
+}
+#fixed-sidebar{
+    position: sticky;
+    bottom: 30px;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: none;
+    color: black; /* Set your desired color for the inactive button's label */
+}
+
+.btn-outline-primary i {
+    color: inherit; /* Ensure the icon color matches the text color */
+}
+
+/* Optional: Add hover and focus effects for better accessibility */
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: transparent;
+    color: #0056b3; /* Slightly darker shade for hover/focus */
+    outline: none;
+    box-shadow: none;
+}
+//reseponsive css
+@media (max-width: 576px) {
+   
+    .terms-conditions-1-sec{
+        padding: 50px !important;
+       }
+  
+    hr {
+      margin: 0px !important;
+    }
+    h2 {
+      font-size: 15px !important;
+    }
+    h3 {
+      font-size: 13px !important;
+    }
+    h6 {
+      font-size: 6px !important;
+    }
+  }

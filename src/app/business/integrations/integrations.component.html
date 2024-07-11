@@ -1,0 +1,95 @@
+<div class="container p-0">
+  <section>
+    <div class="text-start mt-5">
+      <div class="row solutions-section-bg align-items-center justify-content-center">
+        <div class="col-md-10 solution-1-sec">
+          <h1 class="solutions-heading-text">Integrations</h1>
+          <p class="solution-description-text">
+            Integrate with the world-leading software systems to automate your review requests and improve your client experience management.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-10 d-flex flex-wrap solution-cards mb-5">
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 QR-card">
+            <div class="d-flex justify-content-center icon-Onboarding">
+              <img
+                src="../../../assets/images/logo/Google-Logo.wine.svg"
+                alt=""
+                class="google-logo img-fluid"
+              />
+            </div>
+            <h5 class="QR-code-text">Google</h5>
+            <p class="QR-dis-p">
+              Connect your Google account to automatically import reviews. Monitor feedback effortlessly, filter out negative comments, and gain valuable insights to enhance your business’s online presence and reputation.
+            </p>
+            <!-- <h5>
+              <a href="" class="Learn-more-text fw-medium"
+                 [routerLink]="isConnected ?['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]" 
+                 (click)="openDialog()" >
+                {{ isConnected ? "Connect" : "Connected" }}   
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </h5> -->
+            <h5>
+              <a href=""
+                 class="Learn-more-text fw-medium"
+                 [routerLink]="isConnected ? ['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }] : null" 
+                 (click)="openDialog()">
+                {{ isConnected ? "Connect" : "Connected" }}   
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 QR-card">
+            <div class="d-flex justify-content-center icon-Onboarding">
+              <img
+                src="../../../assets/images/logo/Better Business Bureau BBB.svg"
+                alt=""
+                class="google-logo img-fluid"
+              />
+            </div>
+            <h5 class="QR-code-text">BBB</h5>
+            <p class="QR-dis-p mb-4">
+              Integrate with the Better Business Bureau to seamlessly import reviews. Filter out negative comments, analyze customer feedback, and leverage insights to maintain a positive BBB rating and reputation.
+            </p>
+            <h5>
+              <a
+                href=""
+                class="Learn-more-text fw-medium"
+                
+              >Connect <i class="fa fa-arrow-right"></i></a>
+            </h5>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3 QR-card">
+            <div class="d-flex justify-content-center icon-Onboarding">
+              <img
+                src="../../../assets/images/logo/Yelp.svg"
+                alt=""
+                class="google-logo img-fluid"
+              />
+            </div>
+            <h5 class="QR-code-text">Yelp</h5>
+            <p class="QR-dis-p mb-4">
+              Link your Yelp account to import reviews effortlessly. Filter negative comments, monitor customer feedback, and use insights to improve customer satisfaction and boost your business’s reputation on Yelp.
+            </p>
+            <h5>
+              <a
+                href=""
+                class="Learn-more-text fw-medium" (click)="openYelpDialog()"
+              >Connect <i class="fa fa-arrow-right"></i></a>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  

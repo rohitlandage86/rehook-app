@@ -1,0 +1,71 @@
+.about-us-section-1-bg{
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(234, 245, 249, 0.5) 100%
+    );
+       .about-us-1-sec{
+        padding: 150px;
+       }
+      .about-us-heading-text{
+          color: #001b44;
+          font-style: normal;
+          font-size: 2.5rem;
+          font-weight: 500;
+      }
+      .about-us-discription-text{
+          color: #5d6878;
+      }
+  }
+  .about-us-bg-img-2 {
+    background-image: url("../../assets/images/solutions/review-blocker/review-blocker-section-1-bg.svg");
+    height: auto;
+    background-repeat: no-repeat;
+    // margin-top: 90px;
+    .about-us-2-section {
+      display: flex !important;
+      // justify-content: space-around;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .about-us-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .about-us-key-features{
+        color: #001b44;
+        font-style: normal;
+        font-size: 1.5rem; 
+    }
+    .about-us-content {
+      color: #5d6878;
+    }
+    .about-us-solutions-img {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  .about-us-bg-img-3 {
+    background-image: url("../../assets/images/about-us/about-us-bg-sec-3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    .about-us-3-section {
+      display: flex !important;
+      margin-top: 100px;
+      align-items: center;
+    }
+    .about-us-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .about-us-content {
+      color: #5d6878;
+    }
+    .about-us-sec-3-img{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }

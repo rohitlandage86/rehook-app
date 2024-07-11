@@ -1,0 +1,391 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$rehook-app-primary: mat.define-palette(mat.$indigo-palette);
+$rehook-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$rehook-app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$rehook-app-theme: mat.define-light-theme((
+  color: (
+    primary: $rehook-app-primary,
+    accent: $rehook-app-accent,
+    warn: $rehook-app-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($rehook-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Abhaya Libre", serif;
+}
+
+.abhaya-libre-regular {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .abhaya-libre-medium {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .abhaya-libre-semibold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .abhaya-libre-bold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .abhaya-libre-extrabold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar-rehook {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.navbar-nav .nav-link {
+  color: #5d6878;
+  border-bottom: none;
+  text-decoration: none;
+  margin-left: 50px;
+ 
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+.navbar-collapse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.watch-video-btn {
+  background-color: #00acef;
+  border: #00acef;
+  color: #eceef1;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 6px;
+}
+.active-link {
+  color: #00acef !important;
+  font-weight: bold; 
+}
+.sign-in-btn {
+  // color: #0f284f !important;
+  text-decoration: none;
+  font-size: 600 !important;
+  margin-left: 150px !important;
+}
+@media (max-width: 1300.98px) {
+  .navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid, .navbar-expand-lg>.container-lg, .navbar-expand-lg>.container-md, .navbar-expand-lg>.container-sm, .navbar-expand-lg>.container-xl {
+      padding-right: 0;
+      padding-left: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-left: auto !important;
+  }
+  .navbar-nav .nav-link {
+    color: #5d6878;
+    border-bottom: none;
+    text-decoration: none;
+    margin-left: 10px !important;
+   
+  }
+}
+@media (max-width: 768px) {
+  .navbar-rehook {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+
+  .navbar-nav {
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    color: #5d6878;
+    border-bottom: none;
+    text-decoration: none;
+     margin-left: 10px !important; 
+}
+  // .d-flex {
+  //   margin-top: 10px;
+  //   width: 100%;
+  //   justify-content: flex-end;
+  // }
+  .watch-video-btn {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px;
+    border-radius: 6px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    color: #5d6878;
+    border-bottom: none;
+    text-decoration: none;
+     margin-left: 10px !important; 
+}
+.watch-video-btn {
+  background-color: #00acef;
+  border: #00acef;
+  color: #eceef1;
+  padding: 7px !important;
+  margin-left: 20px;
+  border-radius: 6px;
+  font-size: 12px !important;
+}
+}
+.footer-section {
+  background-image: url("../../rehook-app/src/assets/images/home-page-bg-imgs/footer-bg-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 20px;
+
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .get-more-text {
+    font-family: "Abhaya Libre", serif;
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  
+  .how-rehook-p-text {
+    font-family: "Abhaya Libre", serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #bec8cd;
+  }
+
+  .hr-color {
+    background-color: #2e3458;
+  }
+
+  .footer-text {
+    color: #ffffff;
+    font-family: "Abhaya Libre", serif;
+  }
+
+  .footer-list {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  .lebel-text {
+    font-family: "Abhaya Libre", serif;
+    color: #00ACEF;
+  }
+
+  .footer-list li {
+    margin: 5px; 
+  }
+
+  .footer-list li a {
+    text-decoration: none; 
+    color: #ffffff; 
+    font-family: "Abhaya Libre", serif;
+  }
+
+  .footer-list li a:hover {
+    color: #007BFF; 
+  }
+
+  .footer-end-text {
+    color: #ffffff !important;
+    font-family: "Abhaya Libre", serif;
+  }
+
+  .watch-video-btn {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: large;
+    font-family: "Abhaya Libre", serif;
+    align-items: center;
+  }
+  .footer-links{
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 10px;
+  }
+  
+  .footer-section .get-more-text {
+    font-size: 2rem;
+  }
+
+  .footer-section .how-rehook-p-text {
+    font-size: 1rem;
+  }
+
+  .footer-section .watch-video-btn {
+    font-size: medium;
+    padding: 15px;
+  }
+
+  .footer-section .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling */
+  }
+
+  .footer-section .row > div {
+    flex: 0 0 auto; /* Prevent wrapping */
+    margin-bottom: 20px;
+    min-width: 200px; /* Minimum width to keep columns readable */
+  }
+
+  .footer-section .d-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    // justify-content: space-between;
+  }
+
+  .footer-section .footer-list {
+    text-align: left;
+  }
+  .footer-links{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  p {
+    font-size: 10px !important;
+  }
+  h1 {
+    font-size: 20px !important;
+    color: #0f284f !important;
+    font-weight: 600 !important;
+  }
+  h2{
+    font-size: 17px !important;
+    color: #0f284f !important;
+    font-weight: 600 !important;
+  }
+
+  h5{
+    font-size: 13px !important;
+    // color: #0f284f !important;
+  }
+  li{
+    font-size: 7px !important;
+  }
+  label {
+    font-size: 7px !important;
+  }
+  .footer-section .get-more-text {
+    font-size: 1.5rem;
+  }
+
+  .footer-section .how-rehook-p-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-section .watch-video-btn {
+    font-size: small;
+    padding: 10px;
+  }
+
+  .footer-section .row > div {
+    min-width: 150px; /* Adjust minimum width for very small screens */
+  }
+
+  .footer-section .footer-end-text {
+    text-align: center;
+  }
+
+  .footer-links{
+    display: flex;
+    flex-wrap:nowrap !important;
+    padding: 0px !important;
+    // margin: 0px !important;
+  }
+  .footer-col{
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .footer-text{
+    margin-top: 0px !important;
+  }
+  .watch-video-btn {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 7px !important;
+    margin-left: 2px !important;
+    border-radius: 6px;
+
+  }
+  .watch-video-btn .scaner-img {
+    display: none;
+  }
+
+}
+.navbar-toggler.hide {
+  display: none;
+}
+
+
+

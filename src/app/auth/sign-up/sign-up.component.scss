@@ -1,0 +1,119 @@
+
+// input.ng-invalid.ng-touched{
+//     border-color: red;
+// }
+// textarea.ng-invalid.ng-touched{
+//     border-color: red;
+// }
+// select.ng-invalid.ng-touched{
+//     border-color: red;
+// }
+
+.bg-image {
+    background-image: url('../../../assets/images/sign-up/bg-sign-up.jpeg');
+    // height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 0px;
+}
+
+.logo {
+    img {
+        width: 200px;
+    }
+
+}
+.passbtn {
+    background-color: #d8dbe0;
+    border: #b1b7c1;
+    color: #47474e;
+    border-radius: 5px;
+  }
+
+.login-card {
+    border-radius: 1.5rem;
+    background: var(--white-100, #FFF);
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+//   .row{
+//     margin: 0px;
+//     padding: 0px
+//   }
+.form-select{
+    font-size: 15px;
+    color: #000;
+}
+.form-select label {
+    font-size: 15px;
+    color: #5d6878;
+}
+.we-fuel-label{
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 35px;
+}
+.quality-label{
+    color: #2BA8E0;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 35px;
+}
+.btn-login{
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px;
+
+    border-radius: 25px;
+    font-size: large;
+    align-items: center;
+
+}
+@media (max-width: 640px) {
+    label{
+        font-size: 15px !important  ;
+    }
+    .bg-image {
+        background-image: url('../../../assets/images/sign-up/bg-sign-up.jpeg');
+        // height: 150vh;
+        // width: 100%;
+        background-size: cover;
+        background-position: center; 
+    }
+
+   
+    .logo {
+        img {
+            width: 200px;
+        }
+    
+    }
+   
+.login-card {
+    border-radius: 1.5rem;
+    background: var(--white-100, #FFF);
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+}
+    .text-reviews{
+        position: relative;
+        color:#fff;
+        font-size: 2rem;
+        font-family: 'Poppins';
+    }
+   
+    .we-fuel-label{
+        color: #000;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 30px;
+    }
+    .quality-label{
+        color: #2BA8E0;
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 50px;
+    }
+}

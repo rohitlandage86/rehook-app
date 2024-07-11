@@ -1,0 +1,225 @@
+.bg-image {
+    // background-image: url('../../../assets/images/sign-up/bg-sign-up.jpeg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    padding: 0px;
+}
+.business-card {
+    border-radius: 30px;
+    display: flex;
+    padding-top: 150px;
+}
+.connect-google{
+    width: 60px;
+}
+.google-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-text{
+    color: #000;
+text-align: center;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+}
+.card-text-con{
+    color: #000;
+
+font-size:1.2rem;
+font-style: normal;
+font-weight: 400;
+text-align: center;
+}
+.con-google-bus{
+    color: #000;
+text-align: center;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+padding-top: 7px;
+}
+.btn-sikp{
+    border-radius: 5px;
+    background: #00acef;
+    color: #FFF;
+}
+ .google-img{
+    display: flex;
+    justify-content: center;
+ }
+ .input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  input {
+    width: 100%;
+    padding-right: 30px; /* Make room for the icon */
+  }
+  
+  .icon-label {
+    position: absolute;
+    top: 60%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* Allow clicks to pass through to the input */
+  }
+  
+
+
+ .search-location {
+    position: relative;
+    left: 350px;
+    bottom: 30px;
+    background: #ffffff;
+    height: 23px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+::placeholder {
+    color: #808080;
+    // background-image: url('../../../assets/images/connect-my-business/search-google-business.svg');
+    background-color: white;
+    background-position: 5px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+    opacity: 1; 
+ 
+  }
+ 
+  .business-category{
+    color: #000;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 500;
+
+  }
+  .add-business{
+    background-color: #0089ED;
+    color:#FFF;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  .congratulation-text{
+    color: var(--base-black, #08031D);
+text-align: center;
+font-feature-settings: 'liga' off;
+font-family: Inter;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+padding-top: 10px;
+  }
+  .cong-text-meg{
+    color: var(--base-black, #08031D);
+font-feature-settings: 'liga' off;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 600;
+text-align: center;
+  }
+  .integrating-load{
+    color: #000;
+text-align: center;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+  }
+ .business-type-select{
+    display: flex;
+    align-items: center;
+    
+ }
+ .Welcome-on-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader {
+    display: block;
+    position: relative;
+    height: 25px;
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    background: #2BA8E0;
+    animation: 6s prog ease-in infinite;
+}
+
+.load {
+    border: 3px solid #2BA8E0;
+    border-radius: 20px;
+    width: 60%;
+}
+.custom-form-control{
+    background: transparent;
+    border-color: #000;
+}
+
+@keyframes prog {
+    to {
+        width: 100%;
+    }
+}
+
+.integrating-loder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.google-business{
+    overflow: hidden;
+    box-shadow: 5px 7px 20px 0px rgba(66, 66, 173, 0.4);
+}
+.sync-review-select{
+
+    color: #000;
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+}
+.google-business-matching{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.connect-google-matching-location {
+    width: 40px;
+}
+.next-business{
+    background-color: #0089ED;
+    color:#FFF;
+    font-size: 1.2rem;
+    border-radius: 5px;
+  }
+  .back-btn {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #808080;
+
+  }

@@ -1,0 +1,85 @@
+.bg-image {
+    background-image: url('../../../assets/images/sign-up/bg-login-rehook.png');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+}
+
+.login-card {
+    border-radius: 1.5rem;
+    background: var(--white-100, #FFF);
+    box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+.we-fuel-label {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.quality-label {
+    color: #FFF;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.btn-login {
+    background-color: #00acef;
+    border: none;
+    color: #eceef1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: large;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #0090c1;
+}
+
+.btn-login-with-google {
+    background-color: #FFF;
+    border: 1px solid #00acef;
+    border-radius: 10px;
+    color: #000000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login-with-google:hover {
+    background-color: #f1f1f1;
+}
+.passbtn {
+    background-color: #d8dbe0;
+    border: #b1b7c1;
+    color: #47474e;
+    border-radius: 5px;
+  }
+
+@media (max-width: 767px) {
+    label {
+        font-size: 15px !important;
+      }
+    .we-fuel-label, .quality-label {
+        font-size: 1.5rem;
+    }
+
+    .btn-login {
+        font-size: medium;
+        padding: 8px 16px;
+    }
+
+    .btn-login-with-google {
+        padding: 8px;
+    }
+}

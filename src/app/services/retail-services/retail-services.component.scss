@@ -1,0 +1,170 @@
+.retail-services-sec-1-bg-img {
+    background-image: url("../../../assets/images/solutions/unified-inbox/unified-inbox-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    .retail-services-1-section {
+      display: flex;
+      justify-content: space-around;
+    align-items: center;
+      margin-top: 50px;
+    }
+    .retail-services-text {
+      color: #5d6878;
+    }
+    .retail-services-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .retail-services-content {
+      color: #5d6878;
+    }
+    .watch-video-btn {
+      background-color: #00acef;
+      border: #00acef;
+      color: #eceef1;
+      padding: 10px;
+      // margin-left: 20px;
+      border-radius: 6px;
+      font-size: large;
+      align-items: center;
+    }
+    .retail-services-img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .retail-services-bg-img-sec-2 {
+    background-image: url("../../../assets/images/solutions/review-blocker/review-blocker-bg-3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    .retail-services-2-section {
+      display: flex !important;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .retail-services-headline-2 {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .retail-services-content {
+      color: #5d6878;
+    }
+    .retail-services-img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .get-started-text{
+        color: #00149E;
+  
+    }
+ 
+  }
+  .retail-services-bg-img-3 {
+    background-image: url("../../../assets/images/solutions/Qr-code/Qr-section-3-Convenience-bg-img.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    .retail-services-3-section {
+      display: flex !important;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .retail-services-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .retail-services-content {
+      color: #5d6878;
+    }
+    .retail-services-sec-3-img{
+      width: 100%;
+      margin-top: 20px;
+    }
+    .get-started-text{
+        color: #00149E;
+     
+    }
+  }
+  .retail-services-bg-img-4 {
+    background-color: #F3F9FB;
+    .retail-services-4-section {
+      display: flex !important;
+      justify-content: space-around;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .retail-services-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .retail-services-content {
+      color: #5d6878;
+    }
+    .retail-services-img {
+      width: 100%;
+    }
+    .get-started-text{
+        color: #00149E;
+     
+    }
+  }
+  .retail-services-sec-5 {
+    margin-top: 50px;
+    .retail-services-use-rehook {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #001b44;
+    }
+  }
+  .carousel-item {
+    height: 400px;
+  }
+  #myCarousel {
+    margin-top: 50px;
+  }
+  
+  :host::ng-deep.carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50% / 100% 100%;
+    background-color: black;
+  }
+  @media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+      display: none;
+    }
+  
+    .carousel-inner .carousel-item > div:first-child {
+      display: block;
+    }
+  }
+  
+  .carousel-inner .carousel-item {
+    display: flex;
+  }
+  
+  .carousel-inner .carousel-item .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .carousel-inner .carousel-item .col {
+    flex: 1;
+    max-width: 33.3333%;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner .carousel-item .col {
+      max-width: 100%;
+    }
+  }

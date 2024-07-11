@@ -1,0 +1,384 @@
+<div class="container-fluid px-0">
+  <section>
+    <div class="row bg-image p-0 d-flex justify-content-center">
+      <div class="col-lg-10 col-md-12">
+        <div class="logo py-4">
+          <img
+            src="../../../assets/images/logo/rehook-logo.svg"
+            alt="REHOOK Logo"
+            class="img-fluid"
+          />
+        </div>
+        <div class="d-flex flex-wrap ">
+          <div class="col-lg-5 col-md-12 col-sm-12 me-3">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-12 login-card login-form mb-5">
+                <div class="p-4">
+                  <h2 class="text-black fw-bold">
+                    Welcome to <span class="text-primary">REHOOK!</span>
+                  </h2>
+                  <h4>Let's get started!</h4>
+                  <form [formGroup]="sign_upForm">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-md-12 mt-4 p-0">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-float">
+                              <label for="firstName">First Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="firstName"
+                                placeholder="First name"
+                                formControlName="first_name"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    controls['first_name'].invalid &&
+                                    (controls['first_name'].dirty ||
+                                      controls['first_name'].touched)
+                                }"
+                              />
+                            </div>
+                            <span class="text-danger">
+                              <div
+                                *ngIf="
+                                  controls['first_name'].invalid &&
+                                  (controls['first_name'].dirty ||
+                                    controls['first_name'].touched)
+                                "
+                              >
+                                <small>First Name is required</small>
+                              </div>
+                            </span>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-float">
+                              <label for="lastName">Last Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                placeholder="Last name"
+                                formControlName="last_name"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    controls['last_name'].invalid &&
+                                    (controls['last_name'].dirty ||
+                                      controls['last_name'].touched)
+                                }"
+                              />
+                            </div>
+                            <span class="text-danger">
+                              <div
+                                *ngIf="
+                                  controls['last_name'].invalid &&
+                                  (controls['last_name'].dirty ||
+                                    controls['last_name'].touched)
+                                "
+                              >
+                                <small>Last Name is required</small>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3 mb-2 px-0">
+                        <div class="form-float">
+                          <label for="contactNumber">Contact Number</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="contactNumber"
+                            placeholder="1234567890"
+                            formControlName="contact_number"
+                            [ngClass]="{
+                              'is-invalid':
+                                controls['contact_number'].invalid &&
+                                (controls['contact_number'].dirty ||
+                                  controls['contact_number'].touched)
+                            }"
+                          />
+                        </div>
+                        <span class="text-danger">
+                          <div
+                            *ngIf="
+                              controls['contact_number'].invalid &&
+                              (controls['contact_number'].dirty ||
+                                controls['contact_number'].touched)
+                            "
+                          >
+                            <div
+                              *ngIf="controls['contact_number'].errors?.['required']"
+                            >
+                              <small>Contact Number is required</small>
+                            </div>
+                            <div
+                              *ngIf="controls['contact_number'].errors?.['pattern']"
+                            >
+                              <small>Contact Number only 10 digit</small>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                      <div class="col-md-12 mt-3 mb-2 px-0">
+                        <div class="form-float">
+                          <label for="businessType">Business Type</label>
+                          <select
+                            class="form-select form-select-lg p-2"
+                            id="businessType"
+                            formControlName="business_type_id"
+                            [ngClass]="{
+                              'is-invalid':
+                                controls['business_type_id'].invalid &&
+                                (controls['business_type_id'].dirty ||
+                                  controls['business_type_id'].touched)
+                            }"
+                          >
+                            <option selected [value]="null" disabled>
+                              Select Business
+                            </option>
+                            <option
+                              [value]="item.business_type_id"
+                              *ngFor="let item of allBusinesstypelist"
+                            >
+                              {{ item.business_type }}
+                            </option>
+                          </select>
+                        </div>
+                        <span class="text-danger">
+                          <div
+                            *ngIf="
+                              controls['business_type_id'].invalid &&
+                              (controls['business_type_id'].dirty ||
+                                controls['business_type_id'].touched)
+                            "
+                          >
+                            <small>Business Type is required</small>
+                          </div>
+                        </span>
+                      </div>
+                      <div class="col-md-12 mt-3 mb-2 px-0">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-float">
+                              <label for="subscription">Subscription</label>
+                              <select
+                              (change)="OnchangeSubscription($event)"
+                                class="form-select form-select-lg p-2"
+                                id="subscription"
+                                formControlName="subscription_id"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    controls['subscription_id'].invalid &&
+                                    (controls['subscription_id'].dirty ||
+                                      controls['subscription_id'].touched)
+                                }"
+                              >
+                                <option selected [value]="null" disabled>
+                                  Select Subscription
+                                </option>
+                                <option
+                                  [value]="item.subscription_id"
+                                  *ngFor="let item of allSubscriptionlist"
+                                >
+                                  {{ item.subscription_name }}
+                                </option>
+                              </select>
+                            </div>
+                            <span class="text-danger">
+                              <div
+                                *ngIf="
+                                  controls['subscription_id'].invalid &&
+                                  (controls['subscription_id'].dirty ||
+                                    controls['subscription_id'].touched)
+                                "
+                              >
+                                <small>Subscription is required</small>
+                              </div>
+                            </span>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-float">
+                              <label for="duration">Duration</label>
+                              <select
+                              
+                                class="form-select form-select-lg p-2"
+                                id="duration"
+                                formControlName="period_id"
+                                [ngClass]="{
+                                  'is-invalid':
+                                    controls['period_id'].invalid &&
+                                    (controls['period_id'].dirty ||
+                                      controls['period_id'].touched)
+                                }"
+                              >
+                                <option selected [value]="null" disabled>
+                                  Select Duration
+                                </option>
+                                <option
+                                  [value]="item.period_id"
+                                  *ngFor="let item of allDurationlist"
+                                >
+                                  {{ item.period }}
+                                </option>
+                              </select>
+                            </div>
+                            <span class="text-danger">
+                              <div
+                                *ngIf="
+                                  controls['period_id'].invalid &&
+                                  (controls['period_id'].dirty ||
+                                    controls['period_id'].touched)
+                                "
+                              >
+                                <small>Duration is required</small>
+                              </div>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 mt-3 mb-2 px-0">
+                        <div class="form-float">
+                          <label for="businessName">Business Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="businessName"
+                            placeholder="Business name"
+                            formControlName="business_name"
+                            [ngClass]="{
+                              'is-invalid':
+                                controls['business_name'].invalid &&
+                                (controls['business_name'].dirty ||
+                                  controls['business_name'].touched)
+                            }"
+                          />
+                        </div>
+                        <span class="text-danger">
+                          <div
+                            *ngIf="
+                              controls['business_name'].invalid &&
+                              (controls['business_name'].dirty ||
+                                controls['business_name'].touched)
+                            "
+                          >
+                            <small>Business Name is required</small>
+                          </div>
+                        </span>
+                      </div>
+                      <div class="col-md-12 mt-3 mb-2 px-0">
+                        <div class="form-float">
+                          <label for="email">Email address</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            placeholder="name@example.com"
+                            formControlName="email_id"
+                            [ngClass]="{
+                              'is-invalid':
+                                controls['email_id'].invalid &&
+                                (controls['email_id'].dirty ||
+                                  controls['email_id'].touched)
+                            }"
+                          />
+                        </div>
+                        <span class="text-danger">
+                          <div
+                            *ngIf="
+                              controls['email_id'].invalid &&
+                              (controls['email_id'].dirty ||
+                                controls['email_id'].touched)
+                            "
+                          >
+                            <div
+                              *ngIf="controls['email_id'].errors?.['required']"
+                            >
+                              <small>Email Address is required</small>
+                            </div>
+                            <div *ngIf="controls['email_id'].errors?.['email']">
+                              <small>Email must be a valid email address</small>
+                            </div>
+                          </div>
+                        </span>
+                      </div>
+                      <div class="col-md-12 mb-2 px-0">
+                        <div class="form-float">
+                          <label for="password">Password</label>
+                          <div class="input-group">
+                            <input
+                              [type]="passwordVisible ? 'text' : 'password'"
+                              class="form-control"
+                              id="password"
+                              placeholder="Password"
+                              formControlName="password"
+                              [ngClass]="{
+                                'is-invalid':
+                                  controls['password'].invalid &&
+                                  (controls['password'].dirty ||
+                                    controls['password'].touched)
+                              }"
+                            />
+                            <button
+                              class="passbtn"
+                              type="button"
+                              (click)="togglePasswordVisibility()"
+                            >
+                              <i
+                                [class.fa-eye]="passwordVisible"
+                                [class.fa-eye-slash]="!passwordVisible"
+                                class="fa fa-solid"
+                              ></i>
+                            </button>
+                          </div>
+                        </div>
+                        <span class="text-danger">
+                          <div
+                            *ngIf="
+                              controls['password'].invalid &&
+                              (controls['password'].dirty ||
+                                controls['password'].touched)
+                            "
+                          >
+                            <small>Password is required</small>
+                          </div>
+                        </span>
+                      </div>
+                      <div class="col-md-12 d-flex justify-content-end px-0">
+                        <h6 class="label-forgot-password text-primary">
+                          Forgot Password
+                        </h6>
+                      </div>
+                      <div class="row my-4 d-flex justify-content-center">
+                        <button class="btn-login"  (click)="SubmitSign_up()">
+                          Sign Up
+                        </button>
+                      </div>
+                      <div class="col-md-12 d-flex justify-content-end">
+                        <h6 class="label-forgot-password text-primary">
+                          Already have an account?
+                          <a class="text-dark" routerLink="/auth/login"
+                            >Login</a
+                          >
+                        </h6>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-12 d-none d-lg-block pt-4 pe-5">
+            <span class="we-fuel-label fw-bolded fs-1"
+              >Want more<br />reviews?</span
+            >
+            <br />
+            <span class="quality-label fw-bolded fs-1"
+              >We've got <br />you covered.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

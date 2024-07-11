@@ -1,0 +1,81 @@
+.support-1-sec-bg-img {
+    background-image: url("../../../src/assets/images/solutions/unified-inbox/unified-inbox-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    .support-1-section {
+      display: flex;
+      justify-content: space-around;
+    align-items: center;
+      margin-top: 50px;
+    }
+    .support-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .support-content {
+      color: #5d6878;
+    }
+    .watch-video-btn {
+      background-color: #00acef;
+      border: #00acef;
+      color: #eceef1;
+      padding: 10px;
+      // margin-left: 20px;
+      border-radius: 6px;
+      font-size: large;
+      align-items: center;
+    }
+    .chat-support-btn{
+       margin-left: 20px;
+        border-color: #00acef;
+        color: #00acef;
+        padding: 10px;
+        // margin-left: 20px;
+        border-radius: 6px;
+        font-size: large;
+        align-items: center;
+    }
+    .support-img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 576px) {
+     .support-1-sec-bg-img {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+     }
+     .support-1-section{
+      margin-top: 20px !important;
+      margin-bottom: 5px;
+     }
+     .support-img {
+      width: 100%;
+      margin-top: 0px !important;
+    }
+    .watch-video-btn {
+      background-color: #00acef;
+      border: #00acef;
+      color: #eceef1;
+      padding: 5px !important;
+      border-radius: 6px;
+      font-size: small !important;
+      align-items: center;
+      margin: 0;
+    }
+    .chat-support-btn{
+       margin-left: 2px !important;
+        border-color: #00acef;
+        color: #00acef;
+        padding: 5px !important;
+        // margin-left: 20px;
+        border-radius: 6px;
+        font-size: 10px !important;
+        align-items: center;
+    }
+    .button-group{
+      display: flex;
+    }
+  }

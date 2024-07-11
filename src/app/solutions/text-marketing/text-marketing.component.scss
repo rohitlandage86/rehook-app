@@ -1,0 +1,101 @@
+.text-marketing-bg-img{
+    background-image: url("../../../assets/images/solutions/text-marketing/text-marketing-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+//   width:  900px;
+  .text-marketing-1-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .text-marketing-text {
+    color: #5d6878;
+  }
+  .text-marketing-headline {
+    color: #001b44;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  .text-marketing-content {
+    color: #5d6878;
+  }
+  .watch-video-btn {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: large;
+    align-items: center;
+  }
+  .text-marketing-silutions-img {
+    width: 100%;
+    height:auto;
+  }
+}
+.text-marketing-bg-img-2 {
+    background-color: #F3F9FB;
+    .text-marketing-2-section {
+      display: flex !important;
+      justify-content: space-around;
+      margin-top: 50px;
+      align-items: center;
+    }
+    .text-marketing-headline {
+      color: #001b44;
+      font-style: normal;
+      font-size: 2.5rem;
+    }
+    .text-marketing-content {
+      color: #5d6878;
+    }
+    .text-marketing-solutions-img {
+      width: 100%;
+    }
+  }
+
+.text-marketing-bg-img-3 {
+  background-image: url("../../../assets/images/solutions/Qr-code/Qr-section-3-Convenience-bg-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .text-marketing-3-section {
+    display: flex !important;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .text-marketing-headline {
+    color: #001b44;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  .text-marketing-content {
+    color: #5d6878;
+  }
+  .text-marketing-solutions-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+  //reseponsive css
+  @media (max-width: 576px) {
+    .img-fluid {
+      max-width: 100%;
+      height: -webkit-fill-available !important;
+    }
+  
+    hr {
+      margin: 0px !important;
+    }
+    h2 {
+      font-size: 15px !important;
+    }
+    h3 {
+      font-size: 13px !important;
+    }
+    h6 {
+      font-size: 6px !important;
+    }
+  }

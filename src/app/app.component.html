@@ -1,0 +1,256 @@
+
+
+<div class="container-fuild" *ngIf="isDashboard">
+  <div class="row admin-dashboard m-0 ">
+    <div class=" rowadmin-sidebar p-0">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="row admin-dashboard pt-4 px-0 mt-5" >
+      <router-outlet name="sub_Menu"></router-outlet>
+      </div>
+  </div>
+</div>
+<div class="container-fluid " *ngIf="!isDashboard">
+  <section >
+    <div class="row justify-content-center" *ngIf="showNavAndFooter">
+      <div class="col-md-10">
+        <nav class="navbar navbar-expand-lg navbar-light p-0 mt-4">
+          <div class="container-fluid navbar-rehook p-0 m-0">
+            <a class="navbar-brand" href="#">
+              <img src="../../assets/images/logo/rehook-logo.svg" alt="Logo" class="img-fluid"/>
+            </a>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse me-3" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" routerLink="/solutions" routerLinkActive="active-link">Solutions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" routerLink="/services" routerLinkActive="active-link">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" routerLink="/pricing" routerLinkActive="active-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="" routerLink="/support" routerLinkActive="active-link">Support</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link sign-in-btn fs-6   fw-bold" routerLink="auth/sign-up" routerLinkActive="active-link">Sign In</a>
+                </li>
+              </ul>
+            </div>
+            <div class="align-items-center pb-2">
+              <button class="btn watch-video-btn  " routerLink="login">
+                Watch Video
+                <img class="scaner-img ms-1 img-fluid" src="../../assets/images/home-page-bg-imgs/video-icon.svg" alt="Logo"/>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+     
+    </div>
+    
+      <!-- Routing -->
+      <router-outlet ></router-outlet>
+    <div class="row footer-section justify-content-center" *ngIf="showNavAndFooter">
+      <div class="col-md-10 mt-5 align-self-center footer-text">
+        <h5 class="text-center get-more-text">Get More Leads Right Now.</h5>
+        <p class="text-center how-rehook-p-text">
+          Find out now how Rehook's toolkit can support the expansion and
+          scalability of your <br />company.
+        </p>
+        <button class="btn watch-video-btn watch-btn " routerLink="login">
+          Watch Video
+          <img
+          class="scaner-img ms-1 img-fluid"
+          src="../../assets/images/home-page-bg-imgs/video-icon.svg"
+          alt="Logo"
+        />
+        </button>
+        <hr class="hr-color" />
+        <div class="row">
+          <div class="col-md-12 footer-links ">
+            <div class="col-md-3 footer-col">
+              <a class="navbar-brand" href="">
+                <img
+                  src="../../assets/images/logo/rehook-logo.svg"
+                  alt="Logo"
+                  class="img-fluid"
+                />
+              </a>
+              <p class="footer-text mt-3">
+                Rehook’s Ai-powered lead conversion platform may help you
+                outperform your competitors and is compatible with the
+                technologies you already use.
+              </p>
+              <div class="d-flex ">
+                <a class="navbar-brand m-2" href="">
+                  <img
+                    src="../../assets/images/home-page-bg-imgs/footer-icon/Facebook.svg"
+                    alt="Logo"
+                    class="img-fluid"
+                  />
+                </a>
+                <a class="navbar-brand m-2" href="">
+                  <img
+                    src="../../assets/images/home-page-bg-imgs/footer-icon/twitter.svg"
+                    alt="Logo"
+                    class="img-fluid"
+                  />
+                </a>
+                <a class="navbar-brand m-2" href="">
+                  <img
+                    src="../../assets/images/home-page-bg-imgs/footer-icon/linkedin.svg"
+                    alt="Logo"
+                    class="img-fluid"
+                  />
+                </a>
+                <a class="navbar-brand m-2" href="">
+                  <img
+                    src="../../assets/images/home-page-bg-imgs/footer-icon/instagram.svg"
+                    alt="Logo"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-1 me-5 footer-col">
+              <label class="lebel-text">Quick Link</label>
+              <ul class="footer-list">
+                <li>
+                  <a href="">Home</a>
+                </li>
+                <li>
+                  <a href="" routerLink="/about-us">About</a>
+                </li>
+                <li>
+                  <a href="" routerLink="/solution">Solution</a>
+                </li>
+                <li>
+                  <a href="" routerLink="/services">Services</a>
+                </li>
+                <li>
+                  <a href="" routerLink="/solutions/integrations">Integrations</a>
+                </li>
+                <li>
+                  <a href="">Pricing</a>
+                </li>
+                <li>
+                  <a href="">Support</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 footer-col">
+              <label class="lebel-text">Solutions</label>
+              <ul class="footer-list">
+                <li>
+                  <a href="">Website chat</a>
+                </li>
+                <li>
+                  <a href="">QR Code</a>
+                </li>
+                <li>
+                  <a href="">Review Blocker</a>
+                </li>
+                <li>
+                  <a href="">Auto-publish</a>
+                </li>
+                <li>
+                  <a href="">Unified inbox</a>
+                </li>
+                <li>
+                  <a href="">SMS messaging</a>
+                </li>
+                <li>
+                  <a href="">Integrations</a>
+                </li>
+                <li>
+                  <a href="">Text Marketing</a>
+                </li>
+              </ul>
+            </div> 
+            <div class="col-md-2 footer-col">
+              <label class="lebel-text">Service</label>
+              <ul class="footer-list">
+                <li>
+                  <a href="">Retail</a>
+                </li>
+                <li>
+                  <a href="">Home Services</a>
+                </li>
+                <li>
+                  <a href="">Automotive</a>
+                </li>
+                <li>
+                  <a href="">Healthcare</a>
+                </li>
+                <li>
+                  <a href="">Unified inbox</a>
+                </li>
+                <li>
+                  <a href="">SProfessional Services</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <label class="lebel-text">Integrations</label>
+              <ul class="footer-list">
+                <li>
+                  <a href="">Google</a>
+                </li>
+                <li>
+                  <a href="">Trustpilot</a>
+                </li>
+                <li>
+                  <a href="">Yelp</a>
+                </li>
+                <li>
+                  <a href="">Weedmaps</a>
+                </li>
+                <li>
+                  <a href="">Trip Advisor</a>
+                </li>
+                <li>
+                  <a href="">Yellow Pages</a>
+                </li>
+                <li>
+                  <a href="">Better Business Bureau</a>
+                </li>
+                <li>
+                  <a href="">Open Table</a>
+                </li>
+
+                <li>
+                  <a href="">TikTok</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 footer-col">
+              <label class="lebel-text">US Headquarters</label>
+              <p>1650 W Digital UT Lehi 84043 Contact sales: 801.438.4425</p>
+
+              <label class="lebel-text">Australia</label>
+              <p>
+                Level 3, Queen and Collins, 100 Queen Street VIC Melbourne 3000
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-0 hr-color" />
+      </div>
+      <div class="d-flex justify-content-around">
+        <p class="footer-end-text text-start">Rehook Corp Inc. 2024</p>
+        <div class="d-flex">
+          <a href="" class="footer-end-text text-end " routerLink="/terms-conditions"> Terms & Conditions  | Privacy</a>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+</div>

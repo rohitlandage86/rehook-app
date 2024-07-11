@@ -1,0 +1,101 @@
+<section class="business-sidebar ">
+    <div class="container p-0 ">
+      <div class="col-md-10">
+        <nav class="navbar navbar-expand-lg navbar-light p-0 mt-4">
+          <div class="container-fluid navbar-rehook p-0 m-0">
+            <div class="business-logo ms-5">
+              <img src="../../../assets/images/logo/rehook-logo.svg" alt="">
+          </div>
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse me-3" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark" href=""  [routerLink]="['/business', { outlets: { sub_Menu: 'admin' } }]" routerLinkActive="active-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark" href=""  routerLinkActive="active-link">QrCode</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark" href="" [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]" routerLinkActive="active-link">Integration</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark" href="" routerLink="/services" routerLinkActive="active-link">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark " href="" routerLink="/pricing" routerLinkActive="active-link">Reports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fw-bolded fs-6 text-dark" href="" routerLink="/support" routerLinkActive="active-link">User</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link  fw-bolded fs-6 text-dark" routerLink="auth/sign-up" routerLinkActive="active-link">Settings</a>
+                </li>
+                <li class=" nav-item ">
+                  <div class="icon " (click)="logOut()">
+                    <a href="" class="nav-link log-out-btn fw-bolded fs-4 text-dark"  (click)="logOut()" routerLinkActive="active-link"><i class="fa fa-solid fa-right-from-bracket"></i></a>
+
+                  </div>
+              </li>
+              </ul>
+            </div>
+            
+          </div>
+        </nav>
+      </div>
+
+
+        <!-- <div class="business-logo ms-5">
+            <img src="../../../assets/images/logo/rehook-logo.svg" alt="">
+        </div>
+       <ul class="menu-bar">
+            <li class="pointer ">
+                <div class="icon" [routerLink]="['/business', { outlets: { sub_Menu: 'admin' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/dashboard-white.svg" alt="Dashboard" title="Dashboard">
+                </div>
+                <div class="item " [routerLink]="['/business', { outlets: { sub_Menu: 'admin' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/triangle.svg" alt="">
+                </div> 
+            </li>
+            <li class="pointer  ">
+                <div class="icon"  [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/review.svg" alt="Reviews" title="Reviews">
+                </div>
+                <div class="item " [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/triangle.svg" alt="">
+                </div> 
+            </li>
+            <li class="pointer  ">
+                <div class="icon"  [routerLink]="['/business', { outlets: { sub_Menu: 'reports' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/report.svg" alt="Reports" title="Reports">
+                </div>
+                <div class="item " [routerLink]="['/business', { outlets: { sub_Menu: 'reports' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/triangle.svg" alt="">
+                </div> 
+            </li>
+            <li class="pointer  ">
+                <div class="icon"  [routerLink]="['/business', { outlets: { sub_Menu: 'settings' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/settings.svg" alt="settings" title="Settings">
+                </div>
+                <div class="item " [routerLink]="['/business', { outlets: { sub_Menu: 'settings' } }]"
+                [routerLinkActive]="'is-active'">
+                    <img src="../../../assets/images/dashboard-icon/triangle.svg" alt="">
+                </div> 
+            </li>
+            <li class="pointer logout">
+                <div class="icon" (click)="logOut()">
+                    <img src="../../../assets/images/dashboard-icon/logout.svg" alt="Logout" title="Logout">
+                </div>
+            </li>
+        </ul> -->
+
+    </div>
+</section>

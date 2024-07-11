@@ -1,0 +1,180 @@
+
+     <!-- search business location card-->
+            <div class="card start-text business-card p-4"
+              *ngIf="iscard_reputation"
+            >
+              <div class="row d-flex justify-content-center">
+                
+                <div class="col-md-12">
+                  <h4 class="card-text">Select Your Reputation Journey</h4>
+                  <p class="card-text-con">
+                    Choose Your Review Destinations and Watch Your Success Sync
+                    Across the Web!
+                  </p>
+                </div>
+                <div class="col-md-12 google-content">
+                  <img
+                    src="../../../assets/images/connect-my-business/connect-google-my-business.svg"
+                    alt=""
+                    class="connect-google"
+                  />
+                  <p class="con-google-bus">Connect Your Google My Business</p>
+                </div>
+              </div>
+              <!--start working code -->
+              <div class="row d-flex justify-content-center mt-3 p-0">
+                <div class="col-md-8 p-0">
+                  <label class="business-category fs-6 fw-bold">
+                    Select business category</label
+                  >
+                </div>
+                <div class="col-md-8 p-0">
+                  <div class="form-group P-0">
+                    <form>
+                      <div class="input-container">
+                        <input
+                        type="search"
+                        id="businessname"
+                        name="businessname"
+                        matInput
+                        class="form-control custom-form-control mt-2"
+                        placeholder="Business name"
+                        [(ngModel)]="search.businessname"
+                        ngx-google-places-autocomplete
+                        [options]="options"
+                        required
+                        (onAddressChange)="onPlaceChanged($event)"
+                      />
+                        <label for="businessname" class="icon-label">
+                          <i class="fa fa-location-dot"></i>
+                        </label>
+                      </div>
+                      <small class="text-primary">Service area business?</small>
+                    </form>
+                    
+                    <mat-autocomplete #auto1="matAutocomplete" class="mt-4">
+                      <mat-option
+                        *ngFor="let item of allBusinessList"
+                        [value]="item.name"
+                      >
+                        {{ item.name }}
+                      </mat-option>
+                    </mat-autocomplete>
+              
+                  </div>
+                </div>
+              </div>
+
+              <!-- end working code -->
+
+              <div class="d-flex justify-content-center p-2">
+                <button
+                  class="btn add-business btn-lg m-2 px-3 d-flex
+    align-items-center "
+                  (click)="reputationcard()"
+                >
+                  Next <i class="fa fa-arrow-right ms-2 "></i
+                    >
+                </button>
+              </div>
+              
+            </div>
+         <!--after matching to this location card -->
+            <div class="card start-text business-card p-4"
+              *ngIf="iscard_matching_location"
+            >
+              <div class="row d-flex justify-content-center">
+                
+                <div class="col-md-12 text-center">
+                  <p class="text-primary m-0">Collect more reviews when you connect to more review sites </p>
+                  <h2 class=" sync-review-select">
+                    Select revies site to sync your reviews.
+                  </h2>
+                  <p class="">We found Web Mantra IT Solutions on these major review sites. Select whoch review site you and like to connect to our platform.</p>
+                </div>
+              </div>
+           
+              <div class="card">
+                <div class="row justify-content-center">
+                  <div class="google-business-matching">
+                    <img
+                      src="../../../assets/images/connect-my-business/connect-google-my-business.svg"
+                      alt=""
+                      class="connect-google-matching-location m-2 img-fluid"
+                    />
+                    <label class="ms-2 fw-bold">Google My Business <small>(matching to this location)</small></label>
+                  </div>
+                </div>
+                <hr class="mt-0">
+                <div class="col-12 text-center align-items-center mb-3">
+                  <i class= " fa fa-solid fa-check text-primary me-2 mt-2 fs-4"></i>
+                  <strong class="me-2">{{selectedLocation}} -</strong> <small>{{selectedLocationAddress}}</small>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-center mt-3 ">
+                <a href="" class="fs-5 fw-bold back-btn "(click)="toggleReputationCard()">Back</a>
+                <button
+                  class="btn next-business btn-sm  px-3  m-2 d-flex
+    align-items-center"
+                  (click)="matchingLocationcard()"
+                >
+                  Next <i class="fa fa-arrow-right ms-2 "></i
+                    >
+                </button>
+              </div>
+            </div>
+
+            <!-- your are ready generate review-->
+            <div
+            class="card start-text business-card p-5"
+            *ngIf="iscard_ready_generate_review"
+          >
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-12 text-center">
+                <p class="text-primary fs-6">Congratulations...! You have successfully set up your business profile</p>
+                <h2 class="sync-review-select">
+                  You are now ready to monitor and generate reviews for -<h2 class="fw-bolded">{{selectedLocation}} </h2>
+                </h2>
+                
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn  btn-primary btn-lg m-2 d-flex
+    align-items-center"  (click)="CongratulationsLocationcard()" >
+                  Start Here<i class="fa fa-arrow-right ms-2 "></i
+                    >
+                </button>
+              </div>
+            </div>
+          </div>
+            <!--congratulation card loder --> 
+            <div class="row mt-5 ">
+              <div
+                class="card start-text business-card p-5"
+                *ngIf="iscard_congratulation"
+              >
+                <div class="row justify-content-center">
+                  <div class="col-md-12 google-img">
+                    <img
+                      src="../../../assets/images/connect-my-business/connect-google-my-business.svg"
+                      alt=""
+                      class="connect-google img-fluid"
+                    />
+                  </div>
+                  <div class="col-md-10 connect-business " *ngIf="iscard_congratulation">
+                    <div class="row ">
+                      <div class="col-md-12 integrating-loder d-flex ">
+                          <h2 class="fw-bold fs-5 mt-2">Integrating...</h2>
+                          <div class="load mt-3">
+                              <span class="loader"></span>
+                            </div>
+                            <small>Hang tight, greatness loading up!</small>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>

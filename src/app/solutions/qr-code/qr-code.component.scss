@@ -1,0 +1,104 @@
+.qr-bg-img {
+  background-image: url("../../../assets/images/solutions/unified-inbox/unified-inbox-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .Qr-1-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  .qr-text {
+    color: #5d6878;
+  }
+  .qr-headline {
+    color: #001b44;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  .qr-content {
+    color: #5d6878;
+  }
+  .watch-video-btn {
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px;
+    // margin-left: 20px;
+    border-radius: 6px;
+    font-size: large;
+    align-items: center;
+  }
+  .Streamline-Qr-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.qr-bg-img-2 {
+  background-image: url("../../../assets/images/solutions/Qr-code/Qr-code-section-2-bg=img.svg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 90px;
+  .Qr-2-section {
+    display: flex !important;
+    // justify-content: space-around;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .qr-headline {
+    color: #001b44;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  .qr-content {
+    color: #5d6878;
+  }
+  .Streamline-Qr-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.qr-bg-img-3 {
+  background-image: url("../../../assets/images/solutions/Qr-code/Qr-section-3-Convenience-bg-img.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .Qr-3-section {
+    display: flex !important;
+    margin-top: 50px;
+    align-items: center;
+  }
+  .qr-headline {
+    color: #001b44;
+    font-style: normal;
+    font-size: 2.5rem;
+  }
+  .qr-content {
+    color: #5d6878;
+  }
+  .Streamline-Qr-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+//reseponsive css
+@media (max-width: 576px) {
+  .img-fluid {
+    max-width: 100%;
+    height: -webkit-fill-available !important;
+  }
+
+  hr {
+    margin: 0px !important;
+  }
+  h2 {
+    font-size: 15px !important;
+  }
+  h3 {
+    font-size: 13px !important;
+  }
+  h6 {
+    font-size: 6px !important;
+  }
+}
