@@ -37,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: "integration/connect-yelp-business",
-    component: ConnectYelpBusinessComponent,canActivate:[AuthGuard],
+    component: ConnectYelpBusinessComponent,
     pathMatch: "full",
     outlet: "sub_Menu",
   },

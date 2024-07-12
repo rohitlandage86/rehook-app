@@ -14,7 +14,6 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./connect-google-business.component.scss']
 })
 export class ConnectGoogleBusinessComponent implements OnInit {
-  id: string = 'Not_connect';
   connectBusinessForm!: FormGroup;
   iscard_reputation = true;
   iscard_matching_location =false;
@@ -50,7 +49,7 @@ export class ConnectGoogleBusinessComponent implements OnInit {
       place_id: ['', Validators.required],
       business_name: ['',Validators.required],
       email_id: ['', Validators.required],
-      business_status: ['', Validators.required],
+      business_status: [null],
     });
   
   }
@@ -80,12 +79,12 @@ this.iscard_matching_location =false;
       this._authService.connectgooglebusiness(this.connectBusinessForm.getRawValue()).subscribe({
         next: (res: any) => {
           if (res.status == 201 || res.status == 200) {
-            this._toastrService.success(res.message);
             this.iscard_congratulation = true;
             this.iscard_ready_generate_review = false;
             setTimeout(() => {
               this.router.navigate(['/business', { outlets: { sub_Menu: 'admin' } }])
             }, 6000);
+            this._toastrService.success(res.message);
           } else {
             this._toastrService.warning(res.message);
           }
@@ -115,7 +114,7 @@ this.iscard_matching_location =false;
       console.log(name);
 
       const response = await this._authService.selectMyBusinessCategory(name).toPromise(); // Assuming selectMyBusinessCategory returns an Observable
-      console.log(response);
+      console.log('jnkjn',response);
 
       if (response && response.res && Array.isArray(response.res)) {
         this.allBusinessList = response.res;
@@ -202,13 +201,6 @@ this.iscard_matching_location =false;
   }
  
   async onsearchbusiness(){
-    // if (this.searchForm.valid) {
-    //   console.log('  successfully:', this.search);
-    //   // Your further processing logic goes here
-    // } else {
-    //   console.log(' Please check the fields.');
-    // }
-    // console.log('hiii' ,this.search);
     try {
       let name: any = this.search.businessname;
       console.log(name);
