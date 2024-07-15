@@ -8,21 +8,17 @@ import { SharedService } from 'src/app/shared/shared.service';
   styleUrls: ['./business-dashboard.component.scss']
 })
 export class BusinessDashboardComponent implements OnInit {
-  business:any
+  businessInfo:any
   constructor (private router:Router,private _sharedService:SharedService){}
 
   ngOnInit(): void {
-    let confirmationDisplayed = false;
-    this._sharedService.userData$.subscribe({
-      next: (res: any) => {
-        this.business = res;
-      }
-    });
-
-    let business: any = localStorage.getItem('business');
-    if (JSON.parse(business)) {
-      this.business = JSON.parse(business);
+    let businessInfo:any =JSON.parse(localStorage.getItem('business')||'')
+    console.log(businessInfo);
+    
+    if (JSON.parse(businessInfo)) {
+      this.businessInfo = JSON.parse(businessInfo);
     }
+    let confirmationDisplayed = false;
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
         if ((event.url === '/'|| event.url==='/business/(sub_Menu:admin)'||event.url === '/auth/welcome-board') && event.navigationTrigger === 'popstate' && !confirmationDisplayed) {

@@ -25,23 +25,27 @@
             <p class="QR-dis-p">
               Connect your Google account to automatically import reviews. Monitor feedback effortlessly, filter out negative comments, and gain valuable insights to enhance your business’s online presence and reputation.
             </p>
-            <!-- <h5>
-              <a href="" class="Learn-more-text fw-medium"
-                 [routerLink]="isConnected ?['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]" 
-                 (click)="openDialog()" >
-                {{ isConnected ? "Connect" : "Connected" }}   
-                <i class="fa fa-arrow-right"></i>
-              </a>
-            </h5> -->
-            <h5>
-              <a href=""
-                 class="Learn-more-text fw-medium"
-                 [routerLink]="isConnected ? ['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }] : null" 
-                 (click)="openDialog()">
-                {{ isConnected ? "Connect" : "Connected" }}   
-                <i class="fa fa-arrow-right"></i>
-              </a>
-            </h5>
+            <div class="d-flex justify-content-between">
+              <h5 class="d-flex">
+                <button 
+                  class="btn watch-video-btn fw-medium m-0" 
+                  (click)="openDialog()" 
+                  [disabled]="googlePlatformConnected"
+                >
+                  {{ googlePlatformConnected ? 'Connected' : 'Connect' }} 
+                  <i *ngIf="!googlePlatformConnected" class="fa fa-arrow-right"></i>
+                </button>
+              </h5> 
+              <button 
+                *ngIf="googlePlatformConnected" 
+                class="btn back-btn fw-medium m-0 btn-sm fw-bold px-2 py-0" 
+                [routerLink]="['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]"
+              >
+              <i class="fa fa-solid fa-gear m-1"></i>
+                Setting
+              </button>
+            </div>
+            
           </div>
         </div>
         <div class="col-md-4 mb-4">
@@ -57,13 +61,25 @@
             <p class="QR-dis-p mb-4">
               Integrate with the Better Business Bureau to seamlessly import reviews. Filter out negative comments, analyze customer feedback, and leverage insights to maintain a positive BBB rating and reputation.
             </p>
-            <h5>
-              <a
-                href=""
-                class="Learn-more-text fw-medium"
+            <div class="d-flex justify-content-between">
+              <h5 class="d-flex">
+                <button 
+                  class="btn watch-video-btn fw-medium m-0" 
                 
-              >Connect <i class="fa fa-arrow-right"></i></a>
-            </h5>
+                  [disabled]="bbbPlatformConnected"
+                >
+                  {{ bbbPlatformConnected ? 'Connected' : 'Connect' }} 
+                  <i *ngIf="!bbbPlatformConnected" class="fa fa-arrow-right"></i>
+                </button>
+              </h5> 
+              <button 
+                *ngIf="bbbPlatformConnected" 
+                class="btn back-btn fw-medium m-0 btn-sm px-2 py-0" 
+                [routerLink]="['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]"
+              >
+                Setting
+              </button>
+            </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
@@ -78,13 +94,28 @@
             <h5 class="QR-code-text">Yelp</h5>
             <p class="QR-dis-p mb-4">
               Link your Yelp account to import reviews effortlessly. Filter negative comments, monitor customer feedback, and use insights to improve customer satisfaction and boost your business’s reputation on Yelp.
-            </p>
-            <h5>
-              <a
-                href=""
-                class="Learn-more-text fw-medium" (click)="openYelpDialog()"
-              >Connect <i class="fa fa-arrow-right"></i></a>
-            </h5>
+            </p>   
+            <div class="d-flex justify-content-between">
+              <h5 class="d-flex">
+                <button 
+                  class="btn watch-video-btn fw-medium m-0" 
+                  (click)="openYelpDialog($event)" 
+                  [disabled]="yelpPlatformConnected"
+                >
+                  {{ yelpPlatformConnected ? 'Connected' : 'Connect' }} 
+                  <i *ngIf="!yelpPlatformConnected" class="fa fa-arrow-right"></i>
+                </button>
+              </h5> 
+              <button 
+                *ngIf="yelpPlatformConnected" 
+                class="btn back-btn fw-medium m-0 btn-sm px-2 py-0" 
+                [routerLink]="['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]"
+              >
+                Setting
+              </button>
+            </div>
+          
+            
           </div>
         </div>
       </div>

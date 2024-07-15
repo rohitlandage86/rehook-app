@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() { 
     this.createForm();
-    this.getIPAddress();
+ 
   }
   createForm() {
     this.form = this.fb.group({
@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     let data = this.form.value;
-    localStorage.setItem('isLogin', 'true');
     this._sharedService.setIsLogin(true);
     console.log(data);
     if (this.form.valid) {
@@ -48,6 +47,11 @@ export class LoginComponent implements OnInit {
         next: (res: any) => {
           if (res.status == 200 || res.status == 201) {
             this.form.reset();
+            localStorage.setItem('accessToken', res.token);
+            localStorage.setItem("business_id", (res.business.business_id));
+            localStorage.setItem("business_name", (res.business.business_name));
+            localStorage.setItem('expiresin', res.expiresIn);
+            localStorage.setItem("business", JSON.stringify(res.business));
             localStorage.setItem('isLogin', 'true');
             this._sharedService.setIsLogin(true);
             this.router.navigate(['/business', { outlets: { sub_Menu: 'admin' } }])
@@ -61,8 +65,8 @@ export class LoginComponent implements OnInit {
             //   this.router.navigate(['/business', { outlets: { sub_Menu: 'admin' } }]);
 
             // }
+      
             this._toastrService.success(res.message);
-            this.getIPAddress();
             
    
           } else {
@@ -86,18 +90,7 @@ export class LoginComponent implements OnInit {
     }
 
   }
-  getIPAddress()
-  {
-
-    this.http.get("http://api.ipify.org/?format=json").subscribe((res:any)=>{
-
-      this.ipAddress = res.ip;
-      console.log(res);
-      
-
-    });
-
-  }
+  
   //password hide show
   togglePasswordVisibility() {
     this.passwordVisible = !this.passwordVisible;

@@ -12,13 +12,21 @@
             <div class="collapse navbar-collapse me-3" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" href=""  [routerLink]="['/business', { outlets: { sub_Menu: 'admin' } }]" routerLinkActive="active-link">Dashboard</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     [routerLink]="['/business', { outlets: { sub_Menu: 'admin' } }]" 
+                     routerLinkActive="active-link">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" href=""  routerLinkActive="active-link">QrCode</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     [routerLink]="['/business', { outlets: { sub_Menu: 'integration/google-landing-page' } }]" 
+                     routerLinkActive="active-link" 
+                     [routerLinkActiveOptions]="{ exact: true }">QrCode</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" href="" [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]" routerLinkActive="active-link">Integration</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]" 
+                     routerLinkActive="active-link" 
+                     [routerLinkActiveOptions]="{ exact: true }">Integration</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle fw-bolded fs-6 text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,22 +39,32 @@
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark " href="" routerLink="/pricing" routerLinkActive="active-link">Reports</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     routerLink="/pricing" 
+                     routerLinkActive="active-link">Reports</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" href="" routerLink="/support" routerLinkActive="active-link">User</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     routerLink="/support" 
+                     routerLinkActive="active-link">User</a>
                 </li>
                 <li class="nav-item">
-                  <a href="" class="nav-link  fw-bolded fs-6 text-dark" routerLink="auth/sign-up" routerLinkActive="active-link">Settings</a>
+                  <a class="nav-link fw-bolded fs-6 text-dark" 
+                     routerLink="/auth/sign-up" 
+                     routerLinkActive="active-link">Settings</a>
                 </li>
-                <li class=" nav-item ">
-                  <div class="icon " (click)="logOut()">
-                    <a href="" class="nav-link log-out-btn fw-bolded fs-4 text-dark"  (click)="logOut()" routerLinkActive="active-link"><i class="fa fa-solid fa-right-from-bracket"></i></a>
-
+                <li class="nav-item">
+                  <div class="icon" (click)="logOut()">
+                    <a class="nav-link log-out-btn fw-bolded fs-4 text-dark">
+                      <i class="fa fa-solid fa-right-from-bracket"></i>
+                    </a>
                   </div>
-              </li>
+                </li>
               </ul>
             </div>
+            
+            
+            
             
           </div>
         </nav>

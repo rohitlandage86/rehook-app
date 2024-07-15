@@ -13,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./connect-my-business.component.scss']
 })
 export class ConnectMyBusinessComponent implements OnInit {
-  id: string = 'Not_connect';
+  // business_id:any;
   connectBusinessForm!: FormGroup;
   iscard_navigation = true;
   iscard_reputation = false;
@@ -38,7 +38,7 @@ export class ConnectMyBusinessComponent implements OnInit {
     this.createBusinessForm();
     let businessInfo:any =JSON.parse(localStorage.getItem('business')||'')
     console.log(businessInfo);
-
+    // this.business_id=businessInfo.business_id;   
     this.controls['business_id'].patchValue(businessInfo.business_id);
     this.controls['email_id'].patchValue(businessInfo.email_id);
  
@@ -72,7 +72,7 @@ export class ConnectMyBusinessComponent implements OnInit {
       place_id: ['', Validators.required],
       business_name: ['',Validators.required],
       email_id: ['', Validators.required],
-      business_status: ['', Validators.required],
+      business_status: [null],
     });
   
   }
@@ -96,8 +96,8 @@ export class ConnectMyBusinessComponent implements OnInit {
   }
   //after matching location   then click add button...
   matchingLocationcard(){
-this.iscard_ready_generate_review = true;
-this.iscard_matching_location =false;
+     this.iscard_ready_generate_review = true;
+      this.iscard_matching_location =false;
 
   }
   CongratulationsLocationcard(){
@@ -281,9 +281,7 @@ this.iscard_matching_location =false;
   this.router.navigate(['/business', { outlets: { sub_Menu: 'admin' } }]).then(() => {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd && event.url.includes('business')) {
-        this.router.navigate(['/business', { outlets: { sub_Menu: ['integration'] } }],{
-          queryParams: { id: this.id }
-        });
+        this.router.navigate(['/business', { outlets: { sub_Menu: ['integration'] } }]);
       } 
     });
   });

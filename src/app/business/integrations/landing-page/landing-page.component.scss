@@ -1,0 +1,32 @@
+.fa-star {
+    color: grey;
+    cursor: pointer;
+  }
+  
+  .fa-star.hovered,
+  .fa-star.selected {
+    color: gold;
+  }
+  .review-funnel-card {
+    overflow-y:scroll ; 
+  }
+  .btn-login{
+    background-color: #00acef;
+    border: #00acef;
+    color: #eceef1;
+    padding: 10px;
+
+    border-radius: 25px;
+    font-size: large;
+    align-items: center;
+
+}
+
+  .card.active {
+    background-color: #dcf6ff;
+  }
+  
+  .card h4 {
+    transition: color 0.3s ease;
+  }
+  
