@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       if (event instanceof NavigationEnd) {
         // Check if the current route is sign-up, login, or dashboard
         const authRoutes = ['auth/sign-up', 'auth/login','auth/connect-my-business'];
-        const dashboardRoutes = ['dashboard','/business/(sub_Menu:admin)','business/(sub_Menu:integration)','integration/google-landing-page'];
+        const dashboardRoutes = ['dashboard','/business/(sub_Menu:admin)','business/(sub_Menu:integration)','integration/google-landing-page','business/(sub_Menu:review/google)','business/(sub_Menu:review/yelp)'];
 
         this.showNavAndFooter = !authRoutes.some(route => event.url.includes(route));
         this.isDashboard = dashboardRoutes.some(route => event.url.includes(route));

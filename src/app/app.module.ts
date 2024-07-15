@@ -5,7 +5,6 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {MatTabsModule} from '@angular/material/tabs';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { QrCodeComponent } from './solutions/qr-code/qr-code.component';
 import { ReviewBlockerComponent } from './solutions/review-blocker/review-blocker.component';
@@ -26,10 +25,10 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { provideToastr, ToastrModule } from 'ngx-toastr';
 import { AuthGuard } from './shared/auth-guard.service';
 import { AuthInterceptor } from './shared/auth-interceptor.service';
-import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
-// import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgxStarsModule } from 'ngx-stars';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +59,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     MatTabsModule,
     HttpClientModule,
     GooglePlaceModule,
+    NgxStarsModule,
     ToastrModule.forRoot({
       timeOut: 6000,
       positionClass: 'toast-top-right',
