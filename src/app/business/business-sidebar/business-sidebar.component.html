@@ -20,9 +20,16 @@
                 <li class="nav-item">
                   <a class="nav-link fw-bolded fs-6 text-dark" href="" [routerLink]="['/business', { outlets: { sub_Menu: 'integration' } }]" routerLinkActive="active-link">Integration</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" href="" routerLink="/services" routerLinkActive="active-link">Reviews</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle fw-bolded fs-6 text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Reports
+                  </a>
+                  <div class="dropdown-menu z-3" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" [routerLink]="['/business', { outlets: { sub_Menu: 'review/google' } }]"  >Google</a>
+                    <a class="dropdown-item" [routerLink]="['/business', { outlets: { sub_Menu: 'review/yelp' } }]" >Yelp</a>
+                  </div>
                 </li>
+
                 <li class="nav-item">
                   <a class="nav-link fw-bolded fs-6 text-dark " href="" routerLink="/pricing" routerLinkActive="active-link">Reports</a>
                 </li>

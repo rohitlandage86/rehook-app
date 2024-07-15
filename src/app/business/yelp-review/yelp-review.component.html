@@ -1,0 +1,65 @@
+<div class="container my-5">
+    <mat-tab-group class="my-4 card">
+        <mat-tab label="Yelp Reviews" class="card-header d-flex justify-content-between">
+            <div class="card m-2  gap-4" *ngFor="let item of allGoogleReviewList">
+                <div class="card-body">
+                    <div class="author-card">
+                        <div class="row ">
+                            <div class="author-details col-md-3 ">
+                                <div class="col-md-12 d-flex  gap-4">
+                                    <div class="author-img">
+                                        <img class="position-relative"
+                                            [src]=" item.user.image_url||'../../../assets/images/user/user.png'"
+                                            alt="{{ item.author_name }}" />
+                                    </div>
+                                    <div class="review-star">
+                                        <div class="author-name">{{item.user.name}}</div>
+                                        <div class="relative_time_description">{{item.time_created|date}}</div>
+                                        <ngx-stars [readonly]="true" [size]="4" [maxStars]="5"
+                                            [initialStars]="item.rating"></ngx-stars>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-text col-md-9">
+                                {{item.text}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-2 p-4 gap-4" *ngIf="allGoogleReviewList.length==0">
+                <span>Review not found</span>
+            </div>
+        </mat-tab>
+        <mat-tab label="Negative Reviews" class="card-header d-flex justify-content-between">
+            <div class="card m-2  gap-4" *ngFor="let item of allYelpNegativeReviewList">
+                <div class="card-body">
+                    <div class="author-card">
+                        <div class="row ">
+                            <div class="author-details col-md-3 ">
+                                <div class="col-md-12 d-flex  gap-4">
+                                    <img class="author-img"
+                                        [src]="item.profile_photo_url ||'../../../assets/images/user/user.png'"
+                                        alt="{{ item.author_name }}" />
+                                    <div class="review-star">
+                                        <div class="author-name">{{item.name}}</div>
+                                        <div class="relative_time_description">{{item.cts|date}}</div>
+                                        <ngx-stars [readonly]="true" [size]="4" [maxStars]="5"
+                                            [initialStars]="item.rating"></ngx-stars>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="review-text col-md-9">
+                                {{item.comment}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card m-2 p-4 gap-4" *ngIf="allYelpNegativeReviewList.length==0">
+                <span>Review not found</span>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

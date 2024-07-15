@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatPaginatedTabHeader, MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { NgxStarsModule } from 'ngx-stars';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 import { CommonModule } from '@angular/common';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -19,8 +20,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     NgxStarsModule,    
     GooglePlaceModule,
     CommonModule,
-    MatDialogModule
-
+    MatDialogModule,
+    MatPaginatorModule,
+    
   ],
   exports:[
     FormsModule,
@@ -31,7 +33,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     NgxStarsModule,
     GooglePlaceModule,
     CommonModule,
-  
+    MatPaginatorModule
   ]
 })
 export class SharedModule { }

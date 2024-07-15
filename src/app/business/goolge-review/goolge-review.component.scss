@@ -1,0 +1,33 @@
+
+:host::ng-deep .mat-mdc-tab .mdc-tab__text-label,
+.mat-mdc-tab-link .mdc-tab__text-label {
+  
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+:host::ng-deep{
+  flex-grow: unset!important;
+}
+:host::ng-deep span.star{
+  height: 20px !important;
+  width: 17px !important;
+  /* Vector */
+
+
+}
+
+
+
+:host::ng-deep .mat-mdc-tab-label-container{
+  flex-grow: unset!important;
+}
+.author-img{
+  height: 50px !important;
+  width: 50px !important;
+  border: 1px solid #9b9a99;
+  border-radius: 50%;
+}
+.author-name{
+  font-weight: 600;
+}
+

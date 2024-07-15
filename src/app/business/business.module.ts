@@ -9,6 +9,8 @@ import { IntegrationsComponent } from './integrations/integrations.component';
 import { LandingPageComponent } from './integrations/landing-page/landing-page.component';
 import { ConnectGoogleBusinessComponent } from './integrations/connect-google-business/connect-google-business.component';
 import { ConnectYelpBusinessComponent } from './integrations/connect-yelp-business/connect-yelp-business.component';
+import { GoolgeReviewComponent } from './goolge-review/goolge-review.component';
+import { YelpReviewComponent } from './yelp-review/yelp-review.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { ConnectYelpBusinessComponent } from './integrations/connect-yelp-busine
     IntegrationsComponent,
     LandingPageComponent,
     ConnectGoogleBusinessComponent,
-    ConnectYelpBusinessComponent
+    ConnectYelpBusinessComponent,
+    GoolgeReviewComponent,
+    YelpReviewComponent
   ],
   imports: [
     CommonModule,
