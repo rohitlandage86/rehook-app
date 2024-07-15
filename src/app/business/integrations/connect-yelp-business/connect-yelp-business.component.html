@@ -28,38 +28,37 @@
            Select business category</label
          >
        </div>
-       <div class="col-md-8 p-0">
-         <div class="form-group P-0">
-           <form>
-             <div class="input-container">
-               <input
-               type="search"
-               id="phone"
-               name="phone"
-               matInput
-               class="form-control custom-form-control mt-2"
-               placeholder="Enter Phone Number"
-               [(ngModel)]="search.phone"
-               required
-             />
-               <label for="phone" class="icon-label">
-                 <i class="fa fa-phone"></i>
-               </label>
-             </div>
-             <small class="text-primary">Service area business?</small>
-           </form>
-           
-           <mat-autocomplete #auto1="matAutocomplete" class="mt-4">
-             <mat-option
-               *ngFor="let item of allBusinessList"
-               [value]="item.name"
-             >
-               {{ item.name }}
-             </mat-option>
-           </mat-autocomplete>
-     
-         </div>
-       </div>
+   <div class="col-md-8 p-0">
+  <div class="form-group p-0">
+    <form>
+      <div class="input-container d-flex align-items-center">
+        <input
+          type="search"
+          id="phone"
+          name="phone"
+          matInput
+          class="form-control custom-form-control mt-2"
+          placeholder="Enter Country Code and Phone Number"
+          [(ngModel)]="search.combinedPhone"
+          (ngModelChange)="onPhoneInputChange()"
+          required
+        />
+        <label for="phone" class="icon-label">
+          <i class="fa fa-phone"></i>
+        </label>
+      </div>
+      <small class="text-primary">Service area business?</small>
+    </form>
+    
+    <mat-autocomplete #auto1="matAutocomplete" class="mt-4">
+      <mat-option *ngFor="let item of allYelpBusinessList" [value]="item.name">
+        {{ item.name }}
+      </mat-option>
+    </mat-autocomplete>
+  </div>
+</div>
+
+      
      </div>
 
      <!-- end working code -->
@@ -87,30 +86,31 @@ align-items-center "
          <h2 class=" sync-review-select">
            Select revies site to sync your reviews.
          </h2>
-         <p class="">We found Web Mantra IT Solutions on these major review sites. Select whoch review site you and like to connect to our platform.</p>
+         <p class="">We found {{yelpData.name}} on these major review sites. Select whoch review site you and like to connect to our platform.</p>
        </div>
      </div>
   
      <div class="card">
        <div class="row justify-content-center">
-         <div class="google-business-matching">
+         <div class="google-business-matching" *ngIf="yelpData">
            <img
-             src="../../../assets/images/connect-my-business/connect-google-my-business.svg"
+             src="../../../assets/images/logo/Yelp.svg"
              alt=""
              class="connect-google-matching-location m-2 img-fluid"
            />
-           <label class="ms-2 fw-bold">Google My Business <small>(matching to this location)</small></label>
+           <label class="ms-2 fw-bold">Yelp My Business <small>(matching to this location)</small></label>
          </div>
        </div>
        <hr class="mt-0">
        <div class="col-12 text-center align-items-center mb-3">
          <i class= " fa fa-solid fa-check text-primary me-2 mt-2 fs-4"></i>
-         <strong class="me-2"> -</strong> <small></small>
+         <strong class="me-2">{{yelpData.name}} -</strong> <small>{{yelpData.location.address1}},{{yelpData.location.city}},{{yelpData.location.state}}</small>
        </div>
      </div>
      
      <div class="d-flex justify-content-between align-items-center mt-3 ">
-       <a href="" class="fs-5 fw-bold back-btn "(click)="toggleReputationCard()">Back</a>
+      <a class="fs-5 fw-bold back-btn" (click)="toggleReputationCard()">Back</a>
+
        <button
          class="btn next-business btn-sm  px-3  m-2 d-flex
 align-items-center"
@@ -131,7 +131,7 @@ align-items-center"
      <div class="col-md-12 text-center">
        <p class="text-primary fs-6">Congratulations...! You have successfully set up your business profile</p>
        <h2 class="sync-review-select">
-         You are now ready to monitor and generate reviews for -<h2 class="fw-bolded"></h2>
+         You are now ready to monitor and generate reviews for - <h2 class="fw-bolded">{{yelpData.name}}</h2>
        </h2>
        
      </div>

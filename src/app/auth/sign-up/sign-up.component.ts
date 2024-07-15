@@ -88,19 +88,7 @@ SubmitSign_up(){
           localStorage.setItem("business", JSON.stringify(res.business));
           localStorage.setItem('isLogin', 'true');
           this._sharedService.setIsLogin(true);
-
           this.router.navigate(['/auth', 'connect-my-business']);
-           // Patch the form with the received data
-    
-          // if (res.category == 1) {
-            //     // this.router.navigate(['/admin', { outlets: { sub_Menu: 'admin' } }]);
-            //     console.log('category admin');
-            
-            //   } else {
-          //       console.log('category business');
-          //       // this.router.navigate(['/business', { outlets: { sub_Menu: 'admin' } }]);
-              
-          //     }
           this.toastr.success(res.message);
           this.sign_upForm.reset();
         } else {
