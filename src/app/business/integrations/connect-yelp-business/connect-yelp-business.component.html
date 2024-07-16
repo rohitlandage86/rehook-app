@@ -1,6 +1,6 @@
-
+<div class="container-fluid  p-0">
      <!-- search business location card-->
-     <div class="card start-text business-card p-4"
+     <div class="card start-text business-card p-4 m-5 mb-0"
      *ngIf="iscard_reputation"
    >
      <div class="row d-flex justify-content-center">
@@ -76,7 +76,7 @@ align-items-center "
      
    </div>
 <!--after matching to this location card -->
-   <div class="card start-text business-card p-4"
+   <div class="card start-text business-card p-4 m-5"
      *ngIf="iscard_matching_location"
    >
      <div class="row d-flex justify-content-center">
@@ -124,7 +124,7 @@ align-items-center"
 
    <!-- your are ready generate review-->
    <div
-   class="card start-text business-card p-5"
+   class="card start-text business-card p-5 m-5"
    *ngIf="iscard_ready_generate_review"
  >
    <div class="row d-flex justify-content-center">
@@ -150,7 +150,7 @@ align-items-center"  (click)="CongratulationsLocationcard()" >
    <!--congratulation card loder --> 
    <div class="row mt-5 ">
      <div
-       class="card start-text business-card p-5"
+       class="card start-text business-card p-5 m-5"
        *ngIf="iscard_congratulation"
      >
        <div class="row justify-content-center">
@@ -175,3 +175,5 @@ align-items-center"  (click)="CongratulationsLocationcard()" >
        </div>
      </div>
    </div>
+
+</div>

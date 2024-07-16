@@ -8,16 +8,14 @@ import { SharedService } from 'src/app/shared/shared.service';
   styleUrls: ['./business-dashboard.component.scss']
 })
 export class BusinessDashboardComponent implements OnInit {
-  businessInfo:any
+  businessInfo:any;
+  firstName: string = '';
+  lastName: string = '';
+  emailId: string = '';
   constructor (private router:Router,private _sharedService:SharedService){}
 
   ngOnInit(): void {
-    let businessInfo:any =JSON.parse(localStorage.getItem('business')||'')
-    console.log(businessInfo);
-    
-    if (JSON.parse(businessInfo)) {
-      this.businessInfo = JSON.parse(businessInfo);
-    }
+  this.businessinfo();
     let confirmationDisplayed = false;
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
@@ -40,6 +38,13 @@ export class BusinessDashboardComponent implements OnInit {
         }
       }
     });
+  }
+  businessinfo(){
+    let businessInfo:any =JSON.parse(localStorage.getItem('business')||'')
+    console.log(businessInfo);
+    this.firstName=businessInfo.first_name;
+    this.lastName=businessInfo.last_name;
+    this.emailId=businessInfo.email_id;
   }
   confirmNavigationBack(): Promise<boolean> {
     return new Promise<boolean>((resolve) => {

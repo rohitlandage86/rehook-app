@@ -7,8 +7,15 @@
   .fa-star.selected {
     color: gold;
   }
-  .review-funnel-card {
-    overflow-y:scroll ; 
+  .scrollable-content {
+    height: 550px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+  .connect-Qr{
+    height: 250px;
+    width: 300px;
+
+   
   }
   .btn-login{
     background-color: #00acef;

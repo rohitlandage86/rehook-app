@@ -11,6 +11,7 @@ import { ConnectGoogleBusinessComponent } from './integrations/connect-google-bu
 import { ConnectYelpBusinessComponent } from './integrations/connect-yelp-business/connect-yelp-business.component';
 import { GoolgeReviewComponent } from './goolge-review/goolge-review.component';
 import { YelpReviewComponent } from './yelp-review/yelp-review.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { YelpReviewComponent } from './yelp-review/yelp-review.component';
     ConnectGoogleBusinessComponent,
     ConnectYelpBusinessComponent,
     GoolgeReviewComponent,
-    YelpReviewComponent
+    YelpReviewComponent,
+    UsersComponent
   ],
   imports: [
     CommonModule,

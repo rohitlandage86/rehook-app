@@ -9,3 +9,20 @@
   .z-3{
     z-index: 3 !important;
   }
+  /* Custom CSS for additional responsiveness */
+.navbar-rehook {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 80%; /* Adjust logo size for smaller screens */
+  }
+  .sign-in-btn {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  .watch-video-btn {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}

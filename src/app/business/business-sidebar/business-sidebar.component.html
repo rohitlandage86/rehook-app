@@ -37,16 +37,10 @@
                     <a class="dropdown-item" [routerLink]="['/business', { outlets: { sub_Menu: 'review/yelp' } }]" >Yelp</a>
                   </div>
                 </li>
-
-                <li class="nav-item">
+                  <li class="nav-item">
                   <a class="nav-link fw-bolded fs-6 text-dark" 
-                     routerLink="/pricing" 
-                     routerLinkActive="active-link">Reports</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link fw-bolded fs-6 text-dark" 
-                     routerLink="/support" 
-                     routerLinkActive="active-link">User</a>
+                  [routerLink]="['/business', { outlets: { sub_Menu: 'users' } }]"  
+                     routerLinkActive="active-link"[routerLinkActiveOptions]="{ exact: true }">User</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link fw-bolded fs-6 text-dark" 
