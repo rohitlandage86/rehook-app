@@ -9,6 +9,7 @@ import { ConnectGoogleBusinessComponent } from './integrations/connect-google-bu
 import { ConnectYelpBusinessComponent } from './integrations/connect-yelp-business/connect-yelp-business.component';
 import { GoolgeReviewComponent } from './goolge-review/goolge-review.component';
 import { YelpReviewComponent } from './yelp-review/yelp-review.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "admin", pathMatch: "full" },
@@ -52,6 +53,12 @@ const routes: Routes = [
   {
     path: "review/yelp",
     component: YelpReviewComponent,canActivate:[AuthGuard],
+    pathMatch: "full",
+    outlet: "sub_Menu",
+  },
+  {
+    path: "users",
+    component: UsersComponent,canActivate:[AuthGuard],
     pathMatch: "full",
     outlet: "sub_Menu",
   },

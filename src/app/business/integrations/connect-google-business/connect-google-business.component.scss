@@ -224,7 +224,7 @@ font-weight: 600;
 
   }
   :host ::ng-deep .mat-mdc-dialog-container .mdc-dialog__surface {
-    display: contents;
+    display: contents !important;
     width: 100%;
     height: 100%;
-}
+  }

@@ -56,6 +56,7 @@ export class ConnectGoogleBusinessComponent implements OnInit {
   get controls() {
     return this.connectBusinessForm.controls;
   }
+  
   //after busines search  then click add button...
   reputationcard() {
     this.iscard_reputation = false;
@@ -72,8 +73,6 @@ this.iscard_matching_location =false;
 
   }
   CongratulationsLocationcard(){
-
-    
     console.log(this.connectBusinessForm.value);
     if (this.connectBusinessForm.valid) {
       this._authService.connectgooglebusiness(this.connectBusinessForm.getRawValue()).subscribe({

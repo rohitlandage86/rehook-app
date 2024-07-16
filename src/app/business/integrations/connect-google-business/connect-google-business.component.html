@@ -1,6 +1,6 @@
-
+<div class="container-fluid  p-0">
      <!-- search business location card-->
-            <div class="card start-text business-card p-4"
+            <div class="card start-text business-card p-4 m-5"
               *ngIf="iscard_reputation"
             >
               <div class="row d-flex justify-content-center">
@@ -33,25 +33,25 @@
                     <form>
                       <div class="input-container">
                         <input
-                        type="search"
-                        id="businessname"
-                        name="businessname"
-                        matInput
-                        class="form-control custom-form-control mt-2"
-                        placeholder="Business name"
-                        [(ngModel)]="search.businessname"
-                        ngx-google-places-autocomplete
-                        [options]="options"
-                        required
-                        (onAddressChange)="onPlaceChanged($event)"
-                      />
+                          type="search"
+                          id="businessname"
+                          name="businessname"
+                          matInput
+                          class="form-control custom-form-control mt-2"
+                          placeholder="Business name"
+                          [(ngModel)]="search.businessname"
+                          ngx-google-places-autocomplete
+                          [options]="options"
+                          required
+                          (onAddressChange)="onPlaceChanged($event)"
+                        />
                         <label for="businessname" class="icon-label">
                           <i class="fa fa-location-dot"></i>
                         </label>
                       </div>
                       <small class="text-primary">Service area business?</small>
                     </form>
-                    
+
                     <mat-autocomplete #auto1="matAutocomplete" class="mt-4">
                       <mat-option
                         *ngFor="let item of allBusinessList"
@@ -60,7 +60,6 @@
                         {{ item.name }}
                       </mat-option>
                     </mat-autocomplete>
-              
                   </div>
                 </div>
               </div>
@@ -80,7 +79,7 @@
               
             </div>
          <!--after matching to this location card -->
-            <div class="card start-text business-card p-4"
+            <div class="card start-text business-card p-4 m-5"
               *ngIf="iscard_matching_location"
             >
               <div class="row d-flex justify-content-center">
@@ -127,7 +126,7 @@
 
             <!-- your are ready generate review-->
             <div
-            class="card start-text business-card p-5"
+            class="card start-text business-card p-5 m-5"
             *ngIf="iscard_ready_generate_review"
           >
             <div class="row d-flex justify-content-center">
@@ -153,7 +152,7 @@
             <!--congratulation card loder --> 
             <div class="row mt-5 ">
               <div
-                class="card start-text business-card p-5"
+                class="card start-text business-card p-5 m-5"
                 *ngIf="iscard_congratulation"
               >
                 <div class="row justify-content-center">
@@ -178,3 +177,4 @@
                 </div>
               </div>
             </div>
+          </div>
